@@ -1,0 +1,11 @@
+.task{
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding: 16px;
+  text-align: left;
+}
+
+.task:last-of-type{
+  border-bottom: none;
+}

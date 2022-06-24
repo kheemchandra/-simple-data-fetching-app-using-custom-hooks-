@@ -1,0 +1,21 @@
+.form{ 
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+}
+
+.form input{
+  font-size: 17px;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #bbb; 
+}
+
+.form input:focus{
+  border-color: var(--first-color);
+}
+
+.error-message{
+  margin-block: 16px;
+}

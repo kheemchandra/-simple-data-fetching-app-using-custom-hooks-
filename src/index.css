@@ -4,6 +4,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+:root{
+	--first-color: rgb(98, 2, 55);
+	--second-color: rgb(116, 2, 65);
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -30,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 } 
 ol, ul {
-	list-style: none;
+	list-style: none;  
 }
 blockquote, q {
 	quotes: none;
@@ -52,4 +56,20 @@ html {
 body {
   margin: 0;
   background-color: #3f3f3f;
+}
+
+button{
+	background-color: var(--first-color);
+	color: white;
+	font-size: 16px;
+	padding: 10px 30px;
+	border-radius: 20px;
+	border: 1px solid var(--first-color);
+	cursor: pointer;	
+	margin: auto;
+}
+
+button:hover,
+button:active{
+	background-color: var(--second-color);
 }
