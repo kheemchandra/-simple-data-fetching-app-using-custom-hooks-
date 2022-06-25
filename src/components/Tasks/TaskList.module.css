@@ -1,3 +1,7 @@
 .ul{
+  /* text-align: center; */
+}
+.h1{
   text-align: center;
+  margin: 20px;
 }

@@ -5,18 +5,19 @@ import Task from './Task';
 
 import classes from './TaskList.module.css';
 
-const DUMMY_TASKS = [
-  {id: 't1', text: 'Learning about hooks'},
-  {id: 't2', text: 'Second task'},
-  {id: 't3', text: 'Late night coding'},
-];
-
-
-
 const TaskList = props => {
-  let taskList = DUMMY_TASKS.map(task => <Task key={task.id} >{task.text}</Task>);
-  // taskList = <button>Try again</button>
-  // taskList = <p>Loading tasks...</p>
+  const { isLoading, error } = props;
+
+  let taskList = <h1 className={classes.h1}>No tasks found. Start adding some!</h1>;
+  if(props.tasks.length > 0){
+    taskList = <ul>{props.tasks.map(task => <Task key={task.key} >{task.text}</Task>)}</ul>;
+  }   
+  if(error){
+    taskList = <button onClick={props.onFetch}>Try again</button>
+  }
+  if(isLoading){
+    taskList = <p>Loading tasks...</p>
+  }
   return <Section>
     <ul className={classes.ul}>
     {taskList}
